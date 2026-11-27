@@ -1,0 +1,52 @@
+name: Bug report
+description: Something looks, sounds or plays wrong, or the app won't start.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Never attach or link game files, disc images or the built game.** Screenshots and logs are fine.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where in the game?
+      placeholder: "e.g. Boiler Bonanza, near the first vent"
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen again
+      placeholder: "1. Load the saved game\n2. Walk to ...\n3. ..."
+  - type: input
+    id: mac
+    attributes:
+      label: Mac and macOS version
+      placeholder: "e.g. MacBook Air M2, macOS 15.2"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Shown on the ABOUT tab, or the release you downloaded (for example v0.5).
+  - type: dropdown
+    id: controller
+    attributes:
+      label: Controller
+      options: [Keyboard, DualSense (PS5), DualShock 4 (PS4), Xbox, Switch Pro, Other]
+  - type: textarea
+    id: settings
+    attributes:
+      label: Settings you changed from the defaults
+      placeholder: "e.g. resolution 4x, smooth motion on"
+  - type: textarea
+    id: files
+    attributes:
+      label: Picture and log
+      description: Press F11 while the problem is on screen, then drag the files it saves here, along with the session log.

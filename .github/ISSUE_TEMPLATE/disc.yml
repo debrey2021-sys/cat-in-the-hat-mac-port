@@ -1,0 +1,29 @@
+name: My disc isn't recognised
+description: The app says it hasn't tested your version of the disc.
+labels: [disc-version]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Each region and printing of the disc has a different game program, and the app only builds versions that have been tested.
+        Copy or type what the app's message says (a screenshot is fine too) and paste it below. **Don't attach the disc image or any game files.**
+  - type: textarea
+    id: details
+    attributes:
+      label: Details from the app
+      description: The message the app showed, including any title, region or SHA-1 it names.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Where is your disc from?
+      placeholder: "e.g. North America, Platinum Hits / UK, PAL"
+  - type: checkboxes
+    id: own
+    attributes:
+      label: Your copy
+      options:
+        - label: This image was made from a disc I own.
+          required: true
